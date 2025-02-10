@@ -1,0 +1,5 @@
+<div class="select">
+    <select (change)="changeDrawType($event)" [value]="currentDrawType">
+        <option *ngFor="let option of drawOptions" [value]="option.value">{{option.label}}</option>
+    </select>
+</div>

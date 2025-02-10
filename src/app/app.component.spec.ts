@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-openlayers-course' title`, () => {
+  it(`should have the 'openlayers-tutorial' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-openlayers-course');
+    expect(app.title).toEqual('openlayers-tutorial');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-openlayers-course');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, openlayers-tutorial');
   });
 });

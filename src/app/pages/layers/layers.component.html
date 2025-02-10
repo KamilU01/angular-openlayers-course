@@ -1,0 +1,16 @@
+<mat-list class="list">
+  <mat-list-item *ngFor="let layer of layers.getLayersArray()">
+    <input
+      type="number"
+      matInput
+      placeholder="z-index"
+      [value]="layer.getZIndex() ?? ''"
+      (change)="changeLayerZIndex(layer, $event)"
+    />
+    <mat-checkbox
+      (change)="toggleLayerVisibility(layer)"
+      [checked]="layer.getVisible()"
+      >{{ layer.getProperties()["name"] }}</mat-checkbox
+    >
+  </mat-list-item>
+</mat-list>
