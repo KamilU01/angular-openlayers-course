@@ -1,0 +1,15 @@
+<mat-nav-list>
+  @for (item of navItems; track item) {
+  <a
+    mat-list-item
+    appListItemFocusable
+    [routerLink]="[item.route]"
+    routerLinkActive
+    [routerLinkActiveOptions]="{ exact: true }"
+    #rla="routerLinkActive"
+    [activated]="rla.isActive"
+  >
+    <span matListItemTitle>{{ item.title }}</span>
+  </a>
+  }
+</mat-nav-list>
